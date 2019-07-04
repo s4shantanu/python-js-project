@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        {% assets "css_all" %}
+        <link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
+        {% endassets %}
+    </head>
+    <body>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        FirstName
+                    </th>
+                    <th>
+                        LastName
+                    </th>
+                    <th>
+                        Avatar
+                    </th>
+                </thead>
+                <tbody>
+                    {% for item in users %}
+                    <tr>
+                        <td>
+                            {{item.id}}
+                        </td>
+                        <td>
+                            {{item.email}}
+                        </td>
+                        <td>
+                            {{item.first_name}}
+                        </td>
+                        <td>
+                            {{item.last_name}}
+                        </td>
+                        <td>
+                            <img src='{{item.avatar}}' />
+                        </td>
+                    </tr>                    
+                    {% endfor %}
+                </tbody>
+            </table>                
+        </div>        
+    </body>
+</html>

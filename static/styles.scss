@@ -1,0 +1,36 @@
+html,
+body {
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.table {
+
+    th {
+        font-weight: 700;
+    }
+
+    tbody {
+        tr {
+            td:first {
+                width: 5%;
+                text-align: center;                
+            }
+
+            td:not(1) {
+                width: 24%;
+                text-align: center;
+            }
+        }
+    }
+}
