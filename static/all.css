@@ -18,3 +18,10 @@ html, body {
           .table tbody tr td:not(1) {
             width: 24%;
             text-align: center; }
+
+.page-btn {
+  margin: 4px;
+  margin-top: 10px;
+  background-color: white;
+  border: 2px solid black;
+  cursor: pointer; }

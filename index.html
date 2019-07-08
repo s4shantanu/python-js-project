@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link rel='stylesheet' type='text/css' href='static/all.css'>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="app">
+            <table class="table">
+                <thead>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        FirstName
+                    </th>
+                    <th>
+                        LastName
+                    </th>
+                    <th>
+                        Avatar
+                    </th>
+                </thead>
+                <tbody>
+                    <tr v-for="item in users">
+                        <td>
+                            {{item.id}}
+                        </td>
+                        <td>
+                            {{item.email}}
+                        </td>
+                        <td>
+                            {{item.first_name}}
+                        </td>
+                        <td>
+                            {{item.last_name}}
+                        </td>
+                        <td>
+                            {{item.avatar}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="page-btn" v-for="n in totalPages" v-on:click="setPage(n)">{{n}}</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="static/src.js"></script>
+</body>
+
+</html>
